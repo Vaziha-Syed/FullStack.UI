@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
 import { EmployeesService } from 'src/app/services/employees.service';
@@ -16,6 +16,7 @@ export class AddEmployeeComponent implements OnInit {
     name: '',
     email: '',
     phone: 0,
+    // phone: new FormControl("", [Validators.maxLength(10), Validators.pattern("[0-9]")]),
     salary: 0,
     department: ''
   }
